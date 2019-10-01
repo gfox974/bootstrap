@@ -1,0 +1,90 @@
+/* variable */
+@val : 15px;
+
+/* opération */
+.zone1 {
+     margin: 50px + 20;
+     margin: 20px - 15;
+     margin: 20px / 2;
+     margin: 5px * 10;
+	 margin-left: @val; /* utilisation de la variable */
+}
+
+@val1 : 20px;
+@val2 : 20px;
+.zone2 {
+     margin: @val1 + @val2;
+}
+
+
+
+/* Utilisation des propriété d'une classe dans d'autres classes */
+.styles_box { border-radius: 12px; }
+.zone3 {   .styles_box;  }
+.zone4 {    .styles_box;  }
+
+/* Cibler la classe que je veux utiliser (lors d'une hierarchie) */
+#monID {    .maClasse {     margin: 10px;    }	}
+.maClasse_2 {    #monID > .maClasse;  }
+
+/* Utilisation de fonction et arguments */
+.mafonctionradius (@radius) {    border-radius: @radius;	}
+.zone5 {     .mafonctionradius(10px);	}
+.zone6 {    .mafonctionradius(5px);	}
+
+
+/* Utilisation de fonction et arguments */
+.mafonctionmargin (@marginLeft, @marginRight) {
+     margin-left: @marginLeft;
+     margin-right: @marginRight;
+}
+.zone7 {     .mafonctionmargin(10px; 10px); 	}
+.zone8 {  /* .mafonctionmargin(; 5px);  On n'entre que @marginRight */ }
+
+/* héritage sans less
+#content1 #block_1 a, #content1 #block_2 a, #content1 #block_3 a, #content1 #block_4 a {
+     color: #000;
+     text-decoration: none;
+}
+
+#content1 #block_1 span, #content1 #block_2 span, #content1 #block_3 span, #content1 #block_4 span {
+     color: #fff
+     text-decoration: none;
+}
+*/
+/* héritage avec less (pas besoin de répéter #content1) */
+#content1 {
+     #block_1, #block_2, #block_3, #block_4 {
+          a {
+               color: #000;
+               text-decoration: none;
+          }
+          span {
+               color: #fff;
+          }
+     }
+}
+
+/* Pseudo class type hover (directement inclu à l'intérieur) */
+a {
+     color: #000;
+     text-decoration: none;
+     :hover {
+          color: #fff;
+     }
+}
+.monBlock {
+     :active {
+          border: 1px solid #000;
+     }
+}
+
+/* Dans .maClasse_2, utilisation d'une variable déclaré dans une autre classe (.maClasse) */
+.maClasse {
+     @val : 15px;
+}
+/*
+.maClasse_2 {
+     margin: .maClasse[@val];
+}
+*/

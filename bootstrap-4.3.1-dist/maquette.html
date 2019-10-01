@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/maquette.css">
+        <title>Maquette</title>
+    </head>
+    <body>
+    <!-- Exo : Reproduire le zoning exemple -->
+    <div class="container bordure_container">
+        <header>
+            <div class="row justify-content-between top">
+                <div class="col-md-2 bordure_head">
+                    Header - 1
+                </div>
+                <div class="col-md-6 bordure_head">
+                    Header - 2
+                </div>
+                <div class="col-md-2 bordure_head">
+                    Header - 3
+                </div>
+            </div>
+            <div class="row bordure_nav">
+                <div class="col-md-12">
+                    Nav
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <!-- Mettons un carousel en section 2, le customiser (images, sizing..) -->
+            <!-- Mettons une card en section 1, le customiser (image + bouton) -->
+            <div class="row justify-content-between mid">
+                <div class="col-md-2 bordure_mid">
+                    Section - 1
+                    <div class="card" style="width: 100%; border:none;">
+                        <img src="./img/card.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Titre section 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Cliquez ICI !</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 bordure_mid">
+                    <p>Section - 2</p>
+                    <div id="carouselExampleControls" class="carousel slide carImage" data-ride="carousel" data-interval="10"> <!-- Classe rajoutée : carImage, pour resize la hauteur des images -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/brown-donkey-eating-hay-500x480.jpg" class="d-block w-100" alt="..."> <!-- ici, le width (w) est de 100% -->
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/index.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/goat.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/tenor.gif" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Précédente</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Suivante</span>
+                            </a>
+                    </div>
+                </div>
+                <div class="col-md-2 bordure_mid">
+                    Section - 3
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="row justify-content-between foot">
+                <div class="col-md-2 bordure_foot">
+                    Footer - 1
+                </div>
+                <div class="col-md-6 bordure_foot">
+                    Footer - 2
+                </div>
+                <div class="col-md-2 bordure_foot">
+                    Footer - 3
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    </body>
+</html>

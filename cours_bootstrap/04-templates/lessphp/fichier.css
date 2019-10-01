@@ -1,0 +1,58 @@
+.zone1 {
+  margin: 70px;
+  margin: 5px;
+  margin: 10px;
+  margin: 50px;
+  margin-left: 15px;
+}
+.zone2 {
+  margin: 40px;
+}
+.styles_box {
+  border-radius: 12px;
+}
+.zone3 {
+  border-radius: 12px;
+}
+.zone4 {
+  border-radius: 12px;
+}
+#monID .maClasse {
+  margin: 10px;
+}
+.maClasse_2 {
+  margin: 10px;
+}
+.zone5 {
+  border-radius: 10px;
+}
+.zone6 {
+  border-radius: 5px;
+}
+.zone7 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#content1 #block_1 a,
+#content1 #block_2 a,
+#content1 #block_3 a,
+#content1 #block_4 a {
+  color: #000;
+  text-decoration: none;
+}
+#content1 #block_1 span,
+#content1 #block_2 span,
+#content1 #block_3 span,
+#content1 #block_4 span {
+  color: #fff;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a :hover {
+  color: #fff;
+}
+.monBlock :active {
+  border: 1px solid #000;
+}

@@ -1,0 +1,370 @@
+<!-- 
+BOOTSTRAP V4
+------------
+	- doc des changements entre bootstrap4 et la version précédente : https://getbootstrap.com/docs/4.0/migration/
+	Bootstrap v3: https://getbootstrap.com/docs/3.3
+	Bootstrap v4: https://getbootstrap.com/docs/4.1/getting-started/introduction/	
+	- Suppression des glyphicon
+	- Suppression du dossier font
+	- Ajout de la bibliothèque js "Popper.js" ordre des appels js en bas de page: jquery / popper / bootstrap
+		
+	- V3 >> V4 => compatibilité
+	- V4 => mobile first
+		- non compatible avec IE < IE10 mais également une compatibilité IE10 incomplète 
+		- Pour une compatibilité IE9/8 => bootstrap v3
+	
+	- Gestion des marges complètement revue -offset- n'existe plus
+	- ajout d'une nouvelle taille de grille xs - sm - md - lg - xl
+	- inversion des taille de  grille: md v3 === lg v4 (voir plus bas)
+	
+	- taille des colonnes variables
+	- <div class="row"></div> est en display: flex
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Grid Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="grille.css" rel="stylesheet">
+  </head>
+
+  <body>
+<h2>Système de grille</h2>
+    <div class="container">
+	
+<!-- ===================================================================== -->
+	<div class="row">
+		<div class="col-md-10 mx-auto bordure">mx-auto</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 mx-auto bordure">mx-auto</div>
+	</div>
+<!-- 
+	BREAKPOINTS
+	xs	<  576px 	===	col / col-1 / col-{n}	Mobile portrait 	
+	sm 	>= 576px 	===	col-sm-{n}				Mobile paysage / tablette
+	md 	>= 768px 	===	col-md-{n}				
+	lg 	>= 992px 	===	col-lg-{n}
+	xl	>= 1200px 	===	col-xl-{n}
+
+	Avec la class "col", par défaut bootstrap calcul la taille des éléments en divisant la largeur de la classe row par le nombre de .col en direct enfant / pas de limite en soit du nombre de colonnes si ce n'est la cohérence
+	Pas de breakpoint sur les col car correspond au format mobile portrait
+
+	Pour que le div s'adapte au contenu:
+	col-{breakpoint}-auto / col-md-auto
+
+	Pour un alignement horizontal des élément enfant (à mettre sur class="row"):
+	justify-content-{breakpoint}-center
+	justify-content-md-center
+
+	justify-content-start
+	justify-content-center
+	justify-content-end
+	justify-content-around
+	justify-content-between
+
+	Pour un alignement d'un élément unique au milieu(à mettre sur l'élément directement):
+	mx-auto => équivaut à un margin: 0 auto 
+-->
+	
+<!-- 
+	MARGIN & PADDING
+	{property}{sides}-{size} for xs 
+	{property}{sides}-{breakpoint}-{size} 
+
+	property:
+	m - for classes that set margin
+	p - for classes that set padding
+
+	sides:
+	t - for classes that set margin-top or padding-top
+	b - for classes that set margin-bottom or padding-bottom
+	l - for classes that set margin-left or padding-left
+	r - for classes that set margin-right or padding-right
+	x - for classes that set both *-left and *-right
+	y - for classes that set both *-top and *-bottom
+	blank - for classes that set a margin or padding on all 4 sides of the element
+
+	breakpoint:
+	sm
+	md
+	lg
+	xl
+	
+	size:
+	auto - Pour les éléments de structure
+	0 - for classes that eliminate the margin or padding by setting it to 0
+	1 - (by default) for classes that set the margin or padding to $spacer-x * .25 or $spacer-y * .25
+	2 - (by default) for classes that set the margin or padding to $spacer-x * .5 or $spacer-y * .5
+	3 - (by default) for classes that set the margin or padding to $spacer-x or $spacer-y
+	4 - (by default) for classes that set the margin or padding to $spacer-x * 1.5 or $spacer-y * 1.5
+	5 - (by default) for classes that set the margin or padding to $spacer-x * 3 or $spacer-y * 3
+-->	
+</div>
+<hr>
+<!-- ===================================================================== -->
+<h2>Class "row"</h2>
+<div class="container">
+  <div class="row">
+		<div class="col-md-12  bordure"><p><strong>col-md-12</strong></p></div>
+		<div class="w-100 bordure">a</div><!-- w-100 = width:100% -->
+		<div class="col-md-4  bordure"><p><strong>col-md-4</strong></p></div>
+		<div class="col-md-8  bordure"><p><strong>col-md-8</strong></p></div>
+	</div>
+	<div class="row">
+		<div class="col bordure"><p><strong>col</strong></p></div>
+		<div class="w-100"></div><!-- w-100 = width:100% la ligne du dessus est bien en 100% du fait de ce div -->
+		<div class="col bordure"><p><strong>col</strong></p></div><!-- prend la place restante -->
+		<div class="col-md-8 bordure"><p><strong>col-md-8</strong></p></div>
+	</div>
+</div>
+<hr>
+<!-- ===================================================================== -->
+<h2>Class col</h2>
+<div class="container">
+<div class="row">
+	<!-- classe col pour un alignement automatique selon le nombre de div dans la row -->
+	<!-- pas de breakpoint sur la classe col (plus petite taille d'écran) -->
+	<div class="col bordure">1 of 2</div>
+	<div class="col bordure">2 of 2</div>
+</div>
+<div class="row">
+	<div class="col bordure">1 of 3</div>
+	<div class="col bordure">2 of 3</div>
+	<div class="col bordure">3 of 3</div>
+</div>
+<div class="row">
+	<div class="col bordure">1 of 5</div>
+	<div class="col bordure">2 of 5</div>			
+	<div class="col bordure">3 of 5</div>
+	<div class="col bordure">4 of 5</div>
+	<div class="col bordure">5 of 5</div>
+</div>
+</div>
+<hr>
+<!-- ===================================================================== -->
+<h2>Class "row" & Marge</h2>
+<div class="container">
+	
+    <div class="row">
+		<div class="col-md-10 bordure"><p><strong>col-md-10</strong></p></div>
+		<div class="col-md-2 bordure"><p><strong>col-md-2 </strong></p></div>
+		<div class="col-md-6 bordure"><p><strong>col-md-6</strong></p></div>
+		<div class="col-md-6 bordure"><p><strong>col-md-6</strong></p></div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-6  bordure"><p><strong>col-md-6</strong></p></div>
+		<!-- ml-auto pour une marge à gauche gérée automatique selon le nombre de colonne -->
+		<div class="col-md-4 ml-auto  bordure"><p><strong>col-md-4 ml-auto</strong></p></div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-2  bordure"><p><strong>col-md-2 </strong><br /></p></div>
+		<div class="col-md-4 ml-auto  bordure"><p><strong>col-md-4 ml-auto</strong></p></div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-2  bordure"><p><strong>2 colonnes</strong><br /></p></div>
+		<div class="col-md-2 ml-auto  bordure"><p><strong>4 colonnes</strong></p></div>
+		<div class="col-md-2 ml-auto  bordure"><p><strong>4 colonnes</strong></p></div>
+		<div class="col-md-2 ml-auto  bordure"><p><strong>4 colonnes</strong></p></div>
+	</div>
+</div>
+<hr>
+<!-- ===================================================================== -->
+<h2>Justify-content</h2>
+<div class="container">
+  <div class="row justify-content-start">
+    <div class="col-4 bordure">justify-content-start</div>
+    <div class="col-4 bordure">justify-content-start</div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4 bordure">justify-content-center</div>
+    <div class="col-4 bordure">justify-content-center</div>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-4 bordure">justify-content-end</div>
+    <div class="col-4 bordure">justify-content-end</div>
+  </div>
+  <div class="row justify-content-around">
+    <div class="col-4 bordure">justify-content-around</div>
+    <div class="col-4 bordure">justify-content-around</div>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-4 bordure">justify-content-between</div>
+    <div class="col-4 bordure">justify-content-between</div>
+  </div>
+</div>
+<hr>
+<!-- ===================================================================== -->
+ <!-- 
+	Pour des alignements verticaux:
+	Parent > enfant (à mettre sur la class="row")
+	align-items-start
+	align-items-center
+	align-items-end
+	
+	Sur l'élément directement:
+	align-self-start
+	align-self-center
+	align-self-end
+
+ -->
+<div class="container">
+<div class="row align-items-start" style="background-color: bisque; min-height: 140px;">
+	<div class="col bordure">align-items-start</div>
+	<div class="col bordure">align-items-start</div>
+	<div class="col bordure">align-items-start</div>
+</div>
+<hr />
+<div class="row align-items-center" style="background-color: bisque; min-height: 140px;">
+	<div class="col bordure">align-items-center</div>
+	<div class="col bordure">align-items-center</div>
+	<div class="col bordure">align-items-center</div>
+</div>
+<hr />
+<div class="row align-items-end" style="background-color: bisque; min-height: 140px;">
+	<div class="col bordure">align-items-end</div>
+	<div class="col bordure">align-items-end</div>
+	<div class="col bordure">align-items-end</div>
+</div>
+<hr />
+<div class="row" style="background-color: bisque; min-height: 210px;">
+	<div class="col align-self-start bordure">align-self-start</div>
+	<div class="col align-self-center bordure">align-self-center</div>
+	<div class="col align-self-end bordure">align-self-end</div>
+</div>
+
+<hr>
+		            
+
+<!-- ===================================================================== -->
+<!-- /!\ Donner le fichier grille/grille-bootstrap.html & grille/grille-bootstrap.png en exercice /!\
+<!-- ===================================================================== -->
+
+
+      <h1>Bootstrap grid examples</h1>
+      <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+
+      <h3>Five grid tiers</h3>
+      <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+
+      <div class="row">
+        <div class="col-4">.col-4</div>
+        <div class="col-4">.col-4</div>
+        <div class="col-4">.col-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+        <div class="col-sm-4">.col-sm-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">.col-lg-4</div>
+        <div class="col-lg-4">.col-lg-4</div>
+        <div class="col-lg-4">.col-lg-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-4">.col-xl-4</div>
+        <div class="col-xl-4">.col-xl-4</div>
+        <div class="col-xl-4">.col-xl-4</div>
+      </div>
+
+      <h3>Three equal columns</h3>
+      <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
+      <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+
+      <h3>Three unequal columns</h3>
+      <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
+      <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-3">.col-md-3</div>
+      </div>
+
+      <h3>Two columns</h3>
+      <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
+      <div class="row">
+        <div class="col-md-8">.col-md-8</div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+
+      <h3>Full width, single column</h3>
+      <p class="text-warning">No grid classes are necessary for full-width elements.</p>
+
+      <hr>
+
+      <h3>Two columns with two nested columns</h3>
+      <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+      <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+      <div class="row">
+        <div class="col-md-8">
+          .col-md-8
+          <div class="row">
+            <div class="col-md-6">.col-md-6</div>
+            <div class="col-md-6">.col-md-6</div>
+          </div>
+        </div>
+        <div class="col-md-4">.col-md-4</div>
+      </div>
+
+      <hr>
+
+      <h3>Mixed: mobile and desktop</h3>
+      <p>The Bootstrap v4 grid system has five tiers of classes: xs (extra small), sm (small), md (medium), lg (large), and xl (extra large). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
+      <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
+      <div class="row">
+        <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      </div>
+      <div class="row">
+        <div class="col-6">.col-6</div>
+        <div class="col-6">.col-6</div>
+      </div>
+
+      <hr>
+
+      <h3>Mixed: mobile, tablet, and desktop</h3>
+      <p></p>
+      <div class="row">
+        <div class="col-12 col-sm-6 col-lg-8">.col-12 .col-sm-6 .col-lg-8</div>
+        <div class="col-6 col-lg-4">.col-6 .col-lg-4</div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+      </div>
+
+    </div> <!-- /container -->
+  </body>
+</html>

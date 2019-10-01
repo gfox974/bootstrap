@@ -1,0 +1,15 @@
+.container {
+    border: 1px solid grey;
+}
+
+.bordure {
+    border: 1px solid black;
+    min-height: 7vh;
+
+}
+
+.fond {
+    background: lightskyblue;
+    min-height: 14vh; /* on utilise les unités en v pour le responsive fluide, ici 14vh equivaut a peu pres à 140px, on gardera néanmoins le % pour les largeurs */
+    margin: 10px 0; /* valeurs : y x */
+}

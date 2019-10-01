@@ -1,0 +1,125 @@
+<!-- utilisation du starter template et des modeles de structure presents dans la doc bootstrap -->
+<!doctype html>
+<html lang="fr">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css"> <!-- Ici on rajoute notre propre CSS, fonctionne en last read - gaffe aux prios -->
+        <title>Hello, world!</title>
+    </head>
+    <body>
+    <!-- Avantages bootstrap : Mobile first, responsive de base - placement des elements en mode grid
+    Deux types de conteneurs : classique (reserré, equivalent w80% margin auto) ou container-fluid (élargi, w100%)
+    par defaut la grid est répartie en 12 rangées (div class="col"), ligne -> div class="row"
+    les arguments sm / md / lg / xs des div sont liés aux tailles d'ecrans.
+
+    - Le framework fournis des presets de classes et autres, ne pas hesiter a regarder la doc et les css -->
+
+
+    <!-- creation du conteneur global, ne bosser que dedans -->
+    <!-- Ici, on voit que le conteneur est élargi <div class="container-fluid"> -->
+    <div class="container">
+        <h1>Exercice bootstrap</h1>
+
+        <div class="row justify-content-center"> <!-- On peut mettre des directives aux elements parents directement (via des argument processés par les js appellés) -->
+            <div class="col-md-10 bordure">
+                Zone 0
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 mx-auto bordure"> <!-- ici, on passe des arguments à l'element sans adresser le parent (ici mx : margin et axe x, equivalent de margin 0 auto, centré ) -->
+                Zone 1
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto bordure">
+                Zone 2
+            </div>
+            <div class="col-md-6 mx-auto bordure">
+                Zone 3
+            </div>
+        </div>
+        <div class="row"> <!-- Ici, on va forcer le frame a gerer plus de 12 colonnes -->
+            <div class="col bordure">1</div>
+            <div class="col bordure">2</div>
+            <div class="col bordure">3</div>
+            <div class="col bordure">4</div>
+            <div class="col bordure">5</div>
+            <div class="col bordure">6</div>
+            <div class="col bordure">7</div>
+            <div class="col bordure">8</div>
+            <div class="col bordure">9</div>
+            <div class="col bordure">10</div>
+            <div class="col bordure">11</div>
+            <div class="col bordure">12</div>
+            <div class="col bordure">13</div>
+            <div class="col bordure">14</div>
+        </div>
+        <!-- Exercice : reproduire la structure projetée au tableau -->
+        <div class="row justify-content-end">
+            <div class="col-md-3 bordure">Zone 4</div>
+            <div class="col-md-3 bordure">Zone 5</div>
+        </div>
+        <div class="row justify-content-start">
+            <div class="col-md-3 bordure">Zone 6</div>
+            <div class="col-md-3 bordure">Zone 7</div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-3 bordure">Zone 8</div>
+            <div class="col-md-3 bordure">Zone 9</div>
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-md-3 bordure">Zone 10</div>
+            <div class="col-md-3 bordure">Zone 11</div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-md-3 bordure">Zone 12</div>
+            <div class="col-md-3 bordure">Zone 13</div>
+        </div>
+
+        <div class="row"> <!-- Ici, exemple en s'adressant à l'element enfant -->
+            <div class="col-md-8 bordure">Zone 30</div>
+            <div class="col-md-2 ml-auto bordure">Zone 31</div> <!-- abreviation de margin-left: auto, ou en numerique de 1 à 5 -->
+        </div>
+
+        <div class="row align-items-start fond"> <!-- Ici, on aligne les elements dans le haut du parent -->
+            <div class="col bordure">Zone 32</div>
+            <div class="col bordure">Zone 33</div>
+            <div class="col bordure">Zone 34</div>
+            <div class="col bordure">Zone 35</div>
+        </div>
+        <div class="row align-items-center fond"> <!-- Ici, on aligne les elements au milieu du parent -->
+            <div class="col bordure">Zone 36</div>
+            <div class="col bordure">Zone 37</div>
+            <div class="col bordure">Zone 38</div>
+            <div class="col bordure">Zone 39</div>
+        </div>
+        <div class="row align-items-end fond"> <!-- Ici, on aligne les elements en bas du parent -->
+            <div class="col bordure">Zone 40</div>
+            <div class="col bordure">Zone 41</div>
+            <div class="col bordure">Zone 42</div>
+            <div class="col bordure">Zone 43</div>
+        </div>
+        <!-- On remarque que les directives align-items ne sont possibles que lorsque l'element parent a une hauteur definie -->
+        <!-- Ici, nous allons directement modifier l'alignement des elements enfants, sans toucher au conteneur parent -->
+        <div class="row fond">
+            <div class="col align-self-start bordure">Zone 44</div>
+            <div class="col align-self-center bordure">Zone 45</div>
+            <div class="col align-self-center bordure">Zone 46</div>
+            <div class="col align-self-end bordure">Zone 47</div>
+        </div>
+
+    </div> <!-- cloture container principal -->
+
+<!-- Il est preferable de charger les scripts apres avoir load la page -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    </body>
+</html>

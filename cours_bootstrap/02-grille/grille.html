@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="grille.css">
+
+    <title>Ma page</title>
+  </head>
+  <body>
+<!--
+	.container permet de centrer sur la page web
+	.row est une <<rangée>> ou une <<ligne>>
+	.col-md-10 permet de prendre 10 emplacements. (jusqu'à 12 emplacements)
+	.mx-auto permet de centrer sur la page web
+	.col permet de déclarer une colonne (illimité)
+	w-100 : width: 100%;
+	
+	BREAKPOINTS
+	xs < 576px = Mobile portrait
+	sm >= 576px = Mobile paysage / tablette
+	md >= 768px = tablette, laptop
+	lg >= 992px = desktop, laptop
+	xl >= 1200px = desktop, laptop
+	
+	justify-content-start = on démarre au début (de la gauche vers la droite)
+	justify-content-center = on centre au milieu
+	justify-content-end = on démarre de la fin / de la droite
+	justify-content-around = espacement autour des zones
+	justify-content-between = espacement entres les zones
+	
+	MARGIN & PADDING
+	m = margin
+	p = padding
+	
+	mt = margin-top
+	pt = padding-top
+	mb = margin-bottom
+	pb = padding-bottom
+	ml = margin-left
+	pl = padding-left
+	mr = margin-right
+	pr = padding-right
+	mx = margin-right + margin-left
+	px = padding-right + padding-left
+	my = margin-top + margin-bottom
+	py = padding-top + padding-bottom
+	
+	Associer un chiffre de 0 a 5 ou "auto".
+	
+	exemple : ml-5	
+	
+	align-items-start = permet d'aligner en haut (verticalement)
+	align-items-center = permet d'aligner au centre (verticalement)
+	align-items-end = permet d'aligner en bas (verticalement)
+	
+	align-self-start = permet d'aligner l'élément en haut (verticalement)
+	align-self-center = permet d'aligner l'élément au centre (verticalement)
+	align-self-end = permet d'aligner l'élément en bas (verticalement)
+-->
+<!-- ----------------------------------------------------------- -->
+	<div class="container">
+		<h1>Entrainement aux grilles de bootstrap!</h1>
+		<div class="row justify-content-center">
+			<div class="col-md-10 bordure">Zone 0</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 mx-auto bordure">Zone 1</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 bordure">Zone 2</div>
+			<div class="col-md-6 bordure">Zone 3</div>
+		</div>
+		<div class="row">
+			<div class="col bordure">1</div>
+			<div class="col bordure">2</div>
+			<div class="col bordure">3</div>
+			<div class="col bordure">4</div>
+			<div class="col bordure">5</div>
+			<div class="col bordure">6</div>
+			<div class="col bordure">7</div>
+			<div class="col bordure">8</div>
+			<div class="col bordure">9</div>
+			<div class="col bordure">10</div>
+			<div class="col bordure">11</div>
+			<div class="col bordure">12</div>
+			<div class="col bordure">13</div>
+			<div class="col bordure">14</div>
+			<div class="col bordure">15</div>
+			<div class="col bordure">16</div>
+		</div>
+		<div class="row justify-content-end">
+			<div class="col-md-3 bordure">Zone 4</div>
+			<div class="col-md-3 bordure">Zone 5</div>
+		</div>
+		<div class="row justify-content-start">
+			<div class="col-md-3 bordure">Zone 6</div>
+			<div class="col-md-3 bordure">Zone 7</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-md-3 bordure">Zone 8</div>
+			<div class="col-md-3 bordure">Zone 9</div>
+		</div>
+		<div class="row justify-content-around">
+			<div class="col-md-3 bordure">Zone 10</div>
+			<div class="col-md-3 bordure">Zone 11</div>
+		</div>
+		<div class="row justify-content-between">
+			<div class="col-md-3 bordure">Zone 12</div>
+			<div class="col-md-3 bordure">Zone 13</div>
+		</div>
+		<div class="row">
+			<div class="w-50 bordure">Zone 14</div>
+		</div>
+		<div class="row">
+			<div class="col bordure">
+				<div class="row">
+					<div class="col bordure">15.1</div>
+					<div class="col bordure">15.2</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 ml-5 bordure">Zone 16</div>
+		</div>
+		<div class="row">
+			<div class="col bordure">Zone 17</div>
+			<div class="col bordure">Zone 18</div>
+			<div class="col bordure">Zone 19</div>
+		</div>
+		<div class="row">
+			<div class="col bordure">Zone 20</div>
+			<div class="col bordure">Zone 21</div>
+			<div class="col bordure">Zone 22</div>
+			<div class="col bordure">Zone 23</div>
+		</div>
+		<div class="row">
+			<div class="col-md-7 bordure">Zone 24</div>
+			<div class="col-md-5 bordure">Zone 25</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 bordure">Zone 26</div>
+			<div class="col-md-2 bordure">Zone 27</div>
+			<div class="col-md-1 bordure">Zone 28</div>
+			<div class="col-md-1 bordure">Zone 29</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 bordure">Zone 30</div>
+			<div class="col-md-2 ml-auto bordure">Zone 31</div>
+		</div>
+		<div class="row justify-content-between">
+			<div class="col-md-8 bordure">Zone 32</div>
+			<div class="col-md-2 bordure">Zone 33</div>
+		</div>
+		<div class="row justify-content-between">
+			<div class="col-md-2 bordure">Zone 34</div>
+			<div class="col-md-2 bordure">Zone 35</div>
+			<div class="col-md-2 bordure">Zone 36</div>
+			<div class="col-md-2 bordure">Zone 37</div>
+		</div>
+		<div class="row fond">
+			<div class="col bordure">Zone 38</div>
+			<div class="col bordure">Zone 39</div>
+			<div class="col bordure">Zone 40</div>
+			<div class="col bordure">Zone 41</div>
+		</div>
+		<div class="row align-items-start fond">
+			<div class="col bordure">Zone 42</div>
+			<div class="col bordure">Zone 43</div>
+			<div class="col bordure">Zone 44</div>
+			<div class="col bordure">Zone 45</div>
+		</div>
+		<div class="row align-items-center fond">
+			<div class="col bordure">Zone 46</div>
+			<div class="col bordure">Zone 47</div>
+			<div class="col bordure">Zone 48</div>
+			<div class="col bordure">Zone 49</div>
+		</div>
+		<div class="row align-items-end fond">
+			<div class="col bordure">Zone 50</div>
+			<div class="col bordure">Zone 51</div>
+			<div class="col bordure">Zone 52</div>
+			<div class="col bordure">Zone 53</div>
+		</div>
+		<div class="row fond">
+			<div class="col align-self-start bordure">Zone 54</div>
+			<div class="col align-self-center bordure">Zone 55</div>
+			<div class="col align-self-center bordure">Zone 56</div>
+			<div class="col align-self-end bordure">Zone 57</div>
+		</div>
+	</div>
+<!-- ----------------------------------------------------------- -->		
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

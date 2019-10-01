@@ -1,0 +1,48 @@
+.top {
+    height: 10vh;
+}
+
+.bordure_nav {
+    border: 1px solid orange;
+}
+
+.bordure_container {
+    border: 1px solid black;
+}
+
+.bordure_head {
+    border: 1px solid lightcoral;
+}
+
+.mid {
+    height: 60vh;
+}
+
+.bordure_mid {
+    border: 1px solid blue;
+}
+
+.foot {
+    height: 5vh;
+}
+
+.bordure_foot {
+    border: 1px solid green;
+}
+
+.carImage img {
+    margin: 0 auto;
+    height: 55vh;
+}
+
+.btn-primary {
+    background: none;
+    border: none;
+    color: black;
+}
+
+.btn-primary:hover {
+    background: none;
+    border: none;
+    color: greenyellow;
+}
